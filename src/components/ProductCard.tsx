@@ -1,5 +1,8 @@
-export default function ProductCard(props: any) {
+import compareIcon from "../assets/images/compareIcon.png";
+import likeIcon from "../assets/images/likeWhiteIcon.png";
 
+
+export default function ProductCard(props: any) {
   const isNewProduct = () => {
     const createdAt = new Date(props.product.createdAt);
     const now = new Date();
@@ -47,6 +50,23 @@ export default function ProductCard(props: any) {
           New
         </div>
       )}
+
+      <div className="opacity-0 absolute inset-0 z-3 cursor-default bg-[#3a3a3a8e] flex flex-col gap-4 items-center justify-center transition-all duration-500 hover:opacity-100">
+        <button className="bg-white text-[#B88E2F] font-semibold max-w-50 w-full py-3 cursor-pointer">
+          Add To Cart
+        </button>
+
+      <div className="flex gap-4 items-center justify-center">
+        <div className="flex gap-1 items-center justify-center cursor-pointer">
+          <img src={compareIcon} alt="compare icon" className="w-4 h-4"/>
+          <p className="text-white font-semibold">Compare</p>
+        </div>
+        <div className="flex gap-1 items-center justify-center cursor-pointer">
+          <img src={likeIcon} alt="like icon" className="w-4 h-4"/>
+          <p className="text-white font-semibold">Like</p>
+        </div>
+      </div>
+      </div>
     </div>
   );
 }

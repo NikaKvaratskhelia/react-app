@@ -41,7 +41,7 @@ export default function Footer() {
           <h2 className="text-[#9F9F9F] font-medium">Newsletter</h2>
           <div className="flex gap-1.5 items-center">
             <input className="border-b botder-b-black pr-4" type="text" placeholder="Enter Your Email Address"/>
-            <button className="border-b botder-b-black text-[14px] font-medium py-[1.5px]">SUBSCRIBE</button>
+            <button className="border-b botder-b-black text-[14px] font-medium py-[1.5px] cursor-pointer">SUBSCRIBE</button>
           </div>
         </div>
       </div>
