@@ -10,7 +10,7 @@ interface Product {
 
 const productsArr: Product[] = [
   {
-    createdAt: "2026-01-20T05:08:46.550Z",
+    createdAt: "2025-01-20T05:08:46.550Z",
     title: "title 1",
     shortDesc: "shortDesc 1",
     price: 16,
@@ -28,7 +28,7 @@ const productsArr: Product[] = [
     dimensionsCm: { width: 225.3, height: 78, depth: 155.6 },
   },
   {
-    createdAt: "2026-01-20T14:16:03.329Z",
+    createdAt: "2024-01-20T14:16:03.329Z",
     title: "title 3",
     shortDesc: "shortDesc 3",
     price: 80,
@@ -55,7 +55,7 @@ const productsArr: Product[] = [
     dimensionsCm: { width: 260.7, height: 85, depth: 172.4 },
   },
   {
-    createdAt: "2026-01-20T15:35:31.093Z",
+    createdAt: "2022-01-20T15:35:31.093Z",
     title: "title 6",
     shortDesc: "shortDesc 6",
     price: 59,
