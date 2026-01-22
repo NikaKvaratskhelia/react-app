@@ -1,6 +1,7 @@
 import ProductCard from "../components/ProductCard";
 import productsArr from "../db/db";
 import bgImage from "../assets/images/bg.jpg";
+import { Link } from "react-router-dom";
 
 export default function MainPage() {
   return (
@@ -37,9 +38,12 @@ export default function MainPage() {
             <ProductCard key={p.id} product={p} />
           ))}
         </div>
-        <button className="max-w-61.25 w-full border-[#B88E2F] border py-3 inline-block cursor-pointer text-[#B88E2F]  transition-all duration-500 hover:bg-[#B88E2F] hover:text-white">
-          <p className="font-semibold">See More...</p>
-        </button>
+        <Link
+          to={"/shop"}
+          className="max-w-61.25 w-full border-[#B88E2F] border py-3 inline-block cursor-pointer text-[#B88E2F]  transition-all duration-500 hover:bg-[#B88E2F] hover:text-white font-semibold text-center"
+        >
+          See More...
+        </Link>
       </div>
     </main>
   );
