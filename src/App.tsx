@@ -1,14 +1,15 @@
 import Layout from "./layout/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MainPage from "./pages/MainPage";
-import ShopPage from "./pages/ShopPage";
+import ShopPage from "./pages/Shop";
+import HomePage from "./pages/Home";
+import { CartProvider } from "./context/CartContext";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
-      { index: true, element: <MainPage /> },
+      { index: true, element: <HomePage /> },
       { path: "shop", element: <ShopPage /> },
       { path: "product/:id", element: <div>Product</div> },
     ],
@@ -16,5 +17,9 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
+  );
 }

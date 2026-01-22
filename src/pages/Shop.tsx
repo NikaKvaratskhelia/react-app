@@ -1,9 +1,9 @@
 import { useState } from "react";
-import bg from "../assets/images/shopBg.jpg";
-import Filter from "../components/Filter";
-import ProductCard from "../components/ProductCard";
+import Filter from "../components/Shop/Filter";
 import db from "../db/db";
-import Pagination from "../components/Pagination";
+import Pagination from "../components/Shop/Pagination";
+import Hero from "../components/Shop/Hero";
+import ProductsSection from "../components/ProductsSection";
 
 export default function ShopPage() {
   const [showQty, setShowQty] = useState(16);
@@ -25,24 +25,15 @@ export default function ShopPage() {
 
   return (
     <main className="flex flex-col">
-      <div className=" flex items-center justify-center h-[30vh] relative">
-        <div
-          className="bg-center bg-cover absolute inset-0 z-2 blur-[3px]"
-          style={{ backgroundImage: `url(${bg})` }}
-        ></div>
-        <h1 className="text-[48px] font-medium relative z-3">Shop</h1>
-      </div>
+      <Hero />
+
       <Filter
         showQty={showQty}
         onIncrement={onIncrement}
         onDecrement={onDecrement}
       />
 
-      <div className="max-w-300 w-full mx-auto mt-15 flex items-center px-6 justify-between flex-wrap gap-y-10 box-content">
-        {visibleProducts.map((p) => (
-          <ProductCard key={p.id} product={p} />
-        ))}
-      </div>
+      <ProductsSection productQty={visibleProducts.length} />
 
       <Pagination
         showQty={showQty}
