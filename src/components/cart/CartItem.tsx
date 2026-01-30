@@ -1,40 +1,45 @@
-import xBtn from "../../assets/images/xBtn.png";
+import trashBin from "../../assets/images/trashBin.png";
 
-export default function cartItem(props: any) {
-  const product = props.product;
+export default function CartItem(props: any) {
   return (
-    <div className="flex items-center justify-between">
-      <img
-        src="https://picsum.photos/300/300"
-        alt="Product img"
-        className="w-26.25 h-26.25 rounded-[10px]"
-      />
-      <div className="flex flex-col gap-2 mr-auto ml-8">
-        <p>{product?.title}</p>
-        <p>
-          {product?.qty} X{" "}
-          {product.discount === 0 ? (
-            <span>${product.price}</span>
-          ) : (
-            <div className="flex gap-2">
-              <span className="text-[20px] font-semibold">
-                $
-                {+((product.price / 100) * (100 - product.discount)).toFixed(2)}
-              </span>
-              <span className="line-through text-[#B0B0B0]">
-                ${product.price}
-              </span>
-            </div>
-          )}
+    <tr className="grid grid-cols-6 max-w-205 items-center justify-center gap-9 mb-5">
+      <td>
+        <img
+          src="https://picsum.photos/300/300"
+          alt="Product img"
+          className="w-26.25 h-26.25 rounded-[10px]"
+        />
+      </td>
+      <td className="text-center">{props.product?.title}</td>
+      <td className="text-center">
+        {
+          +(
+            (props.product.price / 100) *
+            (100 - props.product.discount)
+          ).toFixed(2)
+        }
+        $
+      </td>
+      <td>
+        <p className="w-8 h-8 mx-auto flex items-center justify-center border border-[#9F9F9F] rounded-[5px]">
+          {props.product?.qty}
         </p>
-      </div>
-
-      <img
-        src={xBtn}
-        alt="x button"
-        className="w-5 h-5 cursor-pointer"
-        onClick={() => props.removeFromCart(props.product)}
-      />
-    </div>
+      </td>
+      <td className="text-center">
+        {+(
+          (props.product.price / 100) *
+          (100 - props.product.discount)
+        ).toFixed(2) * props.product?.qty}
+        $
+      </td>
+      <td>
+        <img
+          src={trashBin}
+          alt="Trash bin"
+          className="w-5 h-5 cursor-pointer"
+          onClick={() => props.removeFromCart(props.product)}
+        />
+      </td>
+    </tr>
   );
 }

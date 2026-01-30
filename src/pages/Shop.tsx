@@ -2,7 +2,7 @@ import { useState } from "react";
 import Filter from "../components/Shop/Filter";
 import db from "../db/db";
 import Pagination from "../components/Shop/Pagination";
-import Hero from "../components/Shop/Hero";
+import Hero from "../components/Hero";
 import ProductsSection from "../components/ProductsSection";
 
 export default function ShopPage() {
@@ -25,7 +25,7 @@ export default function ShopPage() {
 
   return (
     <main className="flex flex-col">
-      <Hero />
+      <Hero text="Shop" />
 
       <Filter
         showQty={showQty}

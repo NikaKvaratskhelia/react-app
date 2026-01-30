@@ -5,7 +5,7 @@ import accIcon from "../assets/images/accIcon.png";
 import searchIcon from "../assets/images/searchIcon.png";
 import heartIcon from "../assets/images/heartIcon.png";
 import cartIcon from "../assets/images/cartIcon.png";
-import CartPopup from "../components/cart/CartPopup";
+import CartPopup from "../components/cartPopup/CartPopup";
 import { useState } from "react";
 
 export default function Header() {

@@ -58,12 +58,12 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     setTotal(calculateTotal(cartItems));
   }, [cartItems]);
 
-  const addToCart = (product: any) => {
+  const addToCart = (product: any, qty: number = 1) => {
     setCartItems((prev) => {
       const existing = prev.find((p) => p.id === product.id);
       if (existing) {
         return prev.map((p) =>
-          p.id === product.id ? { ...p, qty: p.qty + 1 } : p,
+          p.id === product.id ? { ...p, qty: p.qty + qty } : p,
         );
       }
       return [
@@ -74,7 +74,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
           shortDesc: product.shortDesc,
           discount: product.discountPercentage,
           price: product.price,
-          qty: 1,
+          qty: qty,
         },
       ];
     });
