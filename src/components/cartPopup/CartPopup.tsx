@@ -1,10 +1,10 @@
-import { useCart } from "../../context/CartContext";
 import bagImg from "../../assets/images/bagIcon.png";
+import { useCartStore } from "../../store";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
 
 export default function cartPopup(props: any) {
-  const { cartItems, removeFromCart, total } = useCart();
+  const { cartItems, removeFromCart, total } = useCartStore();  
 
   return (
     <div className="fixed inset-0 w-full h-full bg-[#00000079] z-100">

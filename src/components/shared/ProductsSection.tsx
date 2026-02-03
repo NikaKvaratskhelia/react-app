@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import productsArr from "../../db/db";
-import { useCart } from "../../context/CartContext";
+import { useCartStore } from "../../store";
 
 export default function ProductsSection(props: any) {
-  const { addToCart } = useCart();
-  console.log(useCart());
+  const { addToCart } = useCartStore();
 
   return (
     <div className="max-w-300 w-full mx-auto mt-15 flex items-center px-6 justify-center flex-wrap gap-y-10 box-content">

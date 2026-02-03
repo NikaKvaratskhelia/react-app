@@ -15,7 +15,7 @@ export default function CartItem(props: any) {
         {
           +(
             (props.product.price / 100) *
-            (100 - props.product.discount)
+            (100 - props.product.discountPercentage)
           ).toFixed(2)
         }
         $
@@ -28,7 +28,7 @@ export default function CartItem(props: any) {
       <td className="text-center">
         {+(
           (props.product.price / 100) *
-          (100 - props.product.discount)
+          (100 - props.product.discountPercentage)
         ).toFixed(2) * props.product?.qty}
         $
       </td>

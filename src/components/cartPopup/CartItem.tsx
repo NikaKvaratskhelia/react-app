@@ -1,7 +1,7 @@
 import xBtn from "../../assets/images/xBtn.png";
 
 export default function cartItem(props: any) {
-  const product = props.product;
+  const product = props.product;  
   return (
     <div className="flex items-center justify-between">
       <img
@@ -11,22 +11,22 @@ export default function cartItem(props: any) {
       />
       <div className="flex flex-col gap-2 mr-auto ml-8">
         <p>{product?.title}</p>
-        <p>
+        <div>
           {product?.qty} X{" "}
-          {product.discount === 0 ? (
+          {product.discountPercentage === 0 ? (
             <span>${product.price}</span>
           ) : (
-            <div className="flex gap-2">
+            <p className="flex gap-2">
               <span className="text-[20px] font-semibold">
                 $
-                {+((product.price / 100) * (100 - product.discount)).toFixed(2)}
+                {+((product.price / 100) * (100 - product.discountPercentage)).toFixed(2)}
               </span>
               <span className="line-through text-[#B0B0B0]">
                 ${product.price}
               </span>
-            </div>
+            </p>
           )}
-        </p>
+        </div>
       </div>
 
       <img

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useCart } from "../../context/CartContext";
 import CartItem from "./CartItem";
+import { useCartStore } from "../../store";
 
 export default function aside(props: any) {
-  const { cartItems, total } = useCart();
+  const { cartItems, total } = useCartStore();
   const [chosenRadio, setChosenRadio] = useState("");
   const string =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quisquam!";
