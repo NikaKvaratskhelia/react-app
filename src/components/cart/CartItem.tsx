@@ -37,7 +37,7 @@ export default function CartItem(props: any) {
           src={trashBin}
           alt="Trash bin"
           className="w-5 h-5 cursor-pointer"
-          onClick={() => props.removeFromCart(props.product)}
+          onClick={() => props.removeFromCart(props.product.id )}
         />
       </td>
     </tr>

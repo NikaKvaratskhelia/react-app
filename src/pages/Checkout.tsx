@@ -2,7 +2,7 @@ import { useState } from "react";
 import Form from "../components/Checkout/Form";
 import Hero from "../components/shared/Hero";
 import { z } from "zod";
-import Aside from "../components/Checkout/aside";
+import Aside from "../components/Checkout/Aside";
 
 const FormSchema = z.object({
   firstName: z.string().min(2, "First name must be at least 2 characters"),

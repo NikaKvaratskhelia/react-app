@@ -3,6 +3,7 @@ import CartItem from "./CartItem";
 import { useCartStore } from "../../store";
 
 export default function aside(props: any) {
+  
   const { cartItems, total } = useCartStore();
   const [chosenRadio, setChosenRadio] = useState("");
   const string =

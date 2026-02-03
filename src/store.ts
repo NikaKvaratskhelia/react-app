@@ -34,11 +34,7 @@ const calculateTotal = (items: CartItem[]) => {
 export const useCartStore = create<CartStore>((set) => ({
   cartItems: getStoredCart(),
 
-  addToCart: (product, qty = 1) => {
-    console.log(product);
-    console.log({ ...product, qty });
-    
-    
+  addToCart: (product, qty = 1) => {  
     set((state) => {
       const existing = state.cartItems.find((p) => p.id === product.id);
 

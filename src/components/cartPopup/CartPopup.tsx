@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
 
 export default function cartPopup(props: any) {
-  const { cartItems, removeFromCart, total } = useCartStore();  
+  const { cartItems, removeFromCart, total } = useCartStore(); 
 
   return (
     <div className="fixed inset-0 w-full h-full bg-[#00000079] z-100">

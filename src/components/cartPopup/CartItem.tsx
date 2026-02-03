@@ -33,7 +33,7 @@ export default function cartItem(props: any) {
         src={xBtn}
         alt="x button"
         className="w-5 h-5 cursor-pointer"
-        onClick={() => props.removeFromCart(props.product)}
+        onClick={() => props.removeFromCart(props.product.id)}
       />
     </div>
   );

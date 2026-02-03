@@ -11,7 +11,7 @@ export default function CartItem(props: any) {
         <div className="flex gap-2">
           <p className="text-[16px] font-light">
             $
-            {((props.item.price / 100) * (100 - props.item.discount)).toFixed(
+            {((props.item.price / 100) * (100 - props.item.discountPercentage)).toFixed(
               2,
             )}
           </p>
