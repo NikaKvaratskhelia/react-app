@@ -1,5 +1,5 @@
-import compareIcon from "../assets/images/compareIcon.png";
-import likeIcon from "../assets/images/likeWhiteIcon.png";
+import compareIcon from "../../assets/images/compareIcon.png";
+import likeIcon from "../../assets/images/likeWhiteIcon.png";
 
 export default function ProductCard(props: any) {
   const isNewProduct = () => {

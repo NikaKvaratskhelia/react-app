@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
-import productsArr from "../db/db";
-import { useCart } from "../context/CartContext";
+import productsArr from "../../db/db";
+import { useCart } from "../../context/CartContext";
 
 export default function ProductsSection(props: any) {
   const { addToCart } = useCart();
   console.log(useCart());
-  
 
   return (
     <div className="max-w-300 w-full mx-auto mt-15 flex items-center px-6 justify-center flex-wrap gap-y-10 box-content">
@@ -18,12 +17,15 @@ export default function ProductsSection(props: any) {
           <ProductCard key={p.id} product={p} addToCart={addToCart} />
         ))}
       </div>
-      <Link
-        to={"/shop"}
-        className="max-w-61.25 w-full border-[#B88E2F] border py-3 inline-block cursor-pointer text-[#B88E2F]  transition-all duration-500 hover:bg-[#B88E2F] hover:text-white font-semibold text-center"
-      >
-        See More...
-      </Link>
+
+      {props.ShowBtn && (
+        <Link
+          to={"/shop"}
+          className="max-w-61.25 w-full border-[#B88E2F] border py-3 inline-block cursor-pointer text-[#B88E2F]  transition-all duration-500 hover:bg-[#B88E2F] hover:text-white font-semibold text-center"
+        >
+          See More...
+        </Link>
+      )}
     </div>
   );
 }

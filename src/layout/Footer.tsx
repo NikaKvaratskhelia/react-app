@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="max-w-350 w-full mx-auto p-9.5">
-      <div className="flex max-w-325 w-full justify-between items-start py-12.5 border-y border-y-[#9F9F9F]">
+      <div className="flex flex-wrap max-w-325 w-full justify-between items-start py-12.5 border-y border-y-[#9F9F9F]">
         <div className="flex flex-col items-start justify-between gap-11.5">
           <h2 className="text-[24px] font-bold">Furniro.</h2>
           <p className="text-[#9F9F9F] text-[16px] font-normal max-w-71.25">

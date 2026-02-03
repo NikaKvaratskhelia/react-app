@@ -1,9 +1,9 @@
 import CheckoutModul from "../components/Cart/CheckoutModul";
 import Table from "../components/Cart/Table";
-import Hero from "../components/Hero";
+import Hero from "../components/shared/Hero";
 import { useCart } from "../context/CartContext";
 
-export default function CartPage() {
+export default function Cart() {
   const { cartItems, removeFromCart, total } = useCart();
   return (
     <div>

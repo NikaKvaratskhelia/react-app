@@ -2,8 +2,8 @@ import { useState } from "react";
 import Filter from "../components/Shop/Filter";
 import db from "../db/db";
 import Pagination from "../components/Shop/Pagination";
-import Hero from "../components/Hero";
-import ProductsSection from "../components/ProductsSection";
+import Hero from "../components/shared/Hero";
+import ProductsSection from "../components/shared/ProductsSection";
 
 export default function ShopPage() {
   const [showQty, setShowQty] = useState(16);

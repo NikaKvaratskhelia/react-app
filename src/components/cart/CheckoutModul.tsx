@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function CheckoutModul(props: any) {
   return (
     <div className="bg-[#F9F1E7] py-5 max-w-100 w-full flex flex-col justify-center items-center gap-6">
@@ -11,9 +13,9 @@ export default function CheckoutModul(props: any) {
           ${props.total}
         </span>
       </p> 
-      <button className="bg-transparent border border-black rounded-[18px] py-4 text-[20px] w-56 cursor-pointer hover:bg-black hover:text-white transition-all duration-300">
+      <Link to="/checkout" className="bg-transparent border text-center border-black rounded-[18px] py-4 text-[20px] w-56 cursor-pointer hover:bg-black hover:text-white transition-all duration-300">
         Check Out
-      </button>
+      </Link>
     </div>
   );
 }
